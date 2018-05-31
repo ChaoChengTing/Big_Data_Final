@@ -1,5 +1,6 @@
 #import the pandas library and aliasing as pd
 import pandas as pd
+from random import randint
 import os
 article = pd.read_csv(".\\ArticlesApril2018.csv", encoding = 'cp1252')
 # df.pop('columnID') #刪除該行
@@ -22,6 +23,7 @@ commentData = pd.DataFrame(comment)
 print(type(commentData['recommendations'][0]))
 commentData['recommendations'] = commentData['recommendations'].convert_objects(convert_numeric=True)
 commentData = commentData.dropna()
+commentData = commentData.query('recommendations < 1000')
 print(commentData)
-# commentData.to_csv('CleanComment.csv')
+commentData.to_csv('CleanComment.csv')
 os.system("pause")
