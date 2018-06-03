@@ -1,3 +1,4 @@
+import sklearn
 import matplotlib.pyplot as plt
 from lib.statistic.cluster.utils import load_vector
 from lib.statistic.dim_reduction import dimension_reduction
