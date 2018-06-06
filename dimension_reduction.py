@@ -21,6 +21,6 @@ noise_pred = sklearn_LocalOutlierFactor(X, verbose=True, **dict({'contamination'
 plt.figure(figsize=(12,8))
 plt.scatter(X_2d[noise_pred!=-1][:,0], X_2d[noise_pred!=-1][:,1], marker='o',s=3,c='blue')
 plt.title('Visualization - noise removal ratio {}'.format(0.5))
-plt.savefig('visual_tsne_noise_removal.png')
-plt.scatter(X_2d[noise_pred==-1][:,0], X_2d[noise_pred==-1][:,1], marker='o',s=3,c='black')
 plt.savefig('visual_tsne_noise_removal2.png')
+plt.scatter(X_2d[noise_pred==-1][:,0], X_2d[noise_pred==-1][:,1], marker='o',s=3,c='black')
+plt.savefig('visual_tsne_noise_removal1.png')

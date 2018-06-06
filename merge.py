@@ -22,9 +22,7 @@ print (commentData)
 # articleData = articleData['typeOfMaterial'].unique()
 # for i in range(len(articleData)):
 #     print(articleData[i])
-frames = [articleData, commentData]
 # print (frames)
-df_final = reduce(lambda left,right: pd.merge(left,right,on='articleID'), frames)
+df_final = pd.merge(articleData, commentData, on='articleID', validate="one_to_one")
 # print (df_final)
 df_final.to_csv('merge.csv')
-os.system("pause")
