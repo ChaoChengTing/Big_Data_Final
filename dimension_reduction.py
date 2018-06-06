@@ -17,10 +17,10 @@ plt.title('Visualization - {} data'.format(len(X_2d)))
 plt.savefig('visual_tsne.png')
 
 #noise
-noise_pred = sklearn_LocalOutlierFactor(X, verbose=True, **dict({'contamination': 0.5}))
+noise_pred = sklearn_LocalOutlierFactor(X, verbose=True, **dict({'contamination': 0.2}))
 plt.figure(figsize=(12,8))
 plt.scatter(X_2d[noise_pred!=-1][:,0], X_2d[noise_pred!=-1][:,1], marker='o',s=3,c='blue')
-plt.title('Visualization - noise removal ratio {}'.format(0.5))
+plt.title('Visualization - noise removal ratio {}'.format(0.2))
 plt.savefig('visual_tsne_noise_removal2.png')
 plt.scatter(X_2d[noise_pred==-1][:,0], X_2d[noise_pred==-1][:,1], marker='o',s=3,c='black')
 plt.savefig('visual_tsne_noise_removal1.png')
