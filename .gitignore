@@ -105,3 +105,10 @@ venv.bak/
 .mypy_cache/
 .vscode/settings.json
 visual_tsne.png
+BD/pyvenv.cfg
+BD/pip-selfcheck.json
+BD/Scripts/django-admin.py
+BD/Scripts/deactivate.bat
+BD/Scripts/activate.bat
+BD/Scripts/activate
+BD/Scripts/Activate.ps1
