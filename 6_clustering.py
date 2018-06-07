@@ -8,8 +8,8 @@ import numpy as np
 
 words, X = load_vector(".\\noise_removed_vectors.txt", verbose=True)
 
-X_2d = dimension_reduction(X, reduction_method='sklearn_PCA', verbose=True, **dict({'n_components':3}))
-with open('PCA_vector.txt', 'w') as f:
+X_2d = dimension_reduction(X, reduction_method='sklearn_TSNE', verbose=True, **dict({'n_components':3}))
+with open('TSNE_vector.txt', 'w') as f:
 	for row in X_2d:
 		line = ' '.join(map(str, row)) + '\n'
 		f.write(line)
