@@ -13,7 +13,7 @@ for clusterNum in range(2,40):
     km = KMeans(n_clusters=int(clusterNum), random_state=10)
     x_pred = km.fit_predict(X)
     tmp = silhouette_score(X,x_pred,metric='euclidean')
-    print('clusterNum = '+ str(clusterNum) + '\tsilhouette_score =', tmp)
+    print('For n_clusters = '+ str(clusterNum) + '\tThe average silhouette_score is :', tmp)
     if tmp >= now:
         now = tmp
         num = clusterNum

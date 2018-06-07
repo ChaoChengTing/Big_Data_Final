@@ -1,7 +1,6 @@
 #import the pandas library and aliasing as pd
 import pandas as pd
 from random import randint
-import os
 article = pd.read_csv(".\\ArticlesApril2018.csv", encoding = 'cp1252')
 # 轉換成dataframe
 articleData = pd.DataFrame(article)
@@ -20,4 +19,3 @@ commentData = commentData.dropna()
 commentData = commentData.query('recommendations < 1000')
 print(commentData)
 commentData.to_csv('CleanComment.csv')
-os.system("pause")
