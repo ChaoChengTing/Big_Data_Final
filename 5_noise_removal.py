@@ -25,7 +25,7 @@ plt.savefig('visual_tsne_noise_removal2.png')
 plt.scatter(X_2d[noise_pred==-1][:,0], X_2d[noise_pred==-1][:,1], marker='o',s=3,c='black')
 plt.savefig('visual_tsne_noise_removal1.png')
 
-with open('noise_removed_vectors.txt', 'w') as f:
+with open('noise_removed_vectors_test.txt', 'w') as f:
     for w, v, label in zip(words, X, noise_pred):
         if label != -1:
             line = w + ' ' + ' '.join(map(str, v)) + '\n'

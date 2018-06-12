@@ -10,7 +10,7 @@ articleData['multimedia'] = articleData['multimedia'].convert_objects(convert_nu
 articleData = articleData.dropna()
 print(articleData)
 # 輸出
-articleData.to_csv('CleanArticle.csv')
+# articleData.to_csv('CleanArticle.csv')
 comment = pd.read_csv(".\\CommentsApril2018.csv", encoding = 'cp850')
 commentData = pd.DataFrame(comment)
 print(type(commentData['recommendations'][0]))
@@ -18,4 +18,4 @@ commentData['recommendations'] = commentData['recommendations'].convert_objects(
 commentData = commentData.dropna()
 commentData = commentData.query('recommendations < 1000')
 print(commentData)
-commentData.to_csv('CleanComment.csv')
+# commentData.to_csv('CleanComment.csv')

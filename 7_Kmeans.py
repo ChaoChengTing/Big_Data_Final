@@ -17,7 +17,7 @@ for clusterNum in range(2,40):
     if tmp >= now:
         now = tmp
         num = clusterNum
-
+print ("Best clustering :", num)
 km = KMeans(n_clusters=num, random_state=10)
 x_pred = km.fit_predict(X)
 plt.figure(figsize=(10, 6))
